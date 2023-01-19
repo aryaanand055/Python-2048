@@ -96,6 +96,7 @@ if __name__ == '__main__':
     elif(stat == statusCodes[4]):
         os.system("cls")
         print(green("Congragulations on your victory", ["bright"]))
+        print(green("It was nice playing with you...", ["bright"]))
         logic.print_game(matrix)
         print("\n\n")
     elif(stat == statusCodes[1]):
