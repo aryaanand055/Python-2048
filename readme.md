@@ -5,7 +5,7 @@
 ####   3) Install the python package "_simple-colors_"
 ####   4) Run the python file "_2048.py_"
   
-## To install Python Packages
+## To install The Python Package simple-colors
 `
 python -m pip install simple_colors
 `
