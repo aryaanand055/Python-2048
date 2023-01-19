@@ -7,5 +7,5 @@
   
 ## To install Python Packages
 `
-pip install simple-colors
+python -m pip install simple-colors
 `
