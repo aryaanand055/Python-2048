@@ -1,10 +1,12 @@
+# Import the modules
 import logic
 import os
 from simple_colors import *
 
+# Define the main function
 if __name__ == '__main__': 
     matrix = logic.start_game()
-    logic.add_new_2(matrix)
+    logic.add_number(matrix)
     while(input("Shall we start? (y): ") != "y"):
         print("Think abt it again... ", end="")
         pass
@@ -18,15 +20,18 @@ if __name__ == '__main__':
         4: "WON"
 	}
 
+    # Main game loop
     while (True):
         x= input("Enter any command: ")
         os.system('cls')
         if(x == 'W' or x == 'w'):
+            tempMatrix = matrix
             matrix, flag = logic.move_up(matrix)
             status = logic.get_current_state(matrix)
             print(status)
             if(status == statusCodes[1]):
-                logic.add_new_2(matrix)
+                if(tempMatrix != matrix):
+                    logic.add_number(matrix)
             elif(status == statusCodes[2]):
                 pass
             else:
@@ -37,7 +42,7 @@ if __name__ == '__main__':
             status = logic.get_current_state(matrix)
             print(status)
             if(status == statusCodes[1]):
-                logic.add_new_2(matrix)
+                logic.add_number(matrix)
             elif(status == statusCodes[2]):
                 pass
             else:
@@ -48,7 +53,7 @@ if __name__ == '__main__':
             status = logic.get_current_state(matrix)
             print(status)
             if(status == statusCodes[1]):
-                logic.add_new_2(matrix)
+                logic.add_number(matrix)
             elif(status == statusCodes[2]):
                 pass
             else:
@@ -59,12 +64,13 @@ if __name__ == '__main__':
             status = logic.get_current_state(matrix)
             print(status)
             if(status == statusCodes[1]):
-                logic.add_new_2(matrix)
+                logic.add_number(matrix)
             elif(status == statusCodes[2]):
                 pass
             else:
                 break
-
+        
+        # Cheat codes
         elif(x =="sunTzu"):
             logic.multiply(matrix,2)
             status = logic.get_current_state(matrix)
@@ -75,13 +81,14 @@ if __name__ == '__main__':
                 pass
             else:
                 break
-            
+
+        # Force Stop the game 
         elif(x=="stop"):
             break
                 
         else:
             print("Invalid Key Pressed")
-
+            
         logic.print_game(matrix)
         
         if(logic.get_current_state(matrix) == "LOST"):
