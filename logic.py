@@ -14,12 +14,12 @@ def start_game():
 	for i in range(4):
 		matrix.append([""] * 4)
 	print(yellow("Welcome to the 2048 Game!", "bright"))
-	print(yellow("Commands are as follows : "), end="/n/n")
+	print(yellow("Commands are as follows : "), end="\n\n")
 	print(magenta("'W' or 'w' : Move Up", "italic"))
 	print(magenta("'S' or 's' : Move Down", "italic"))
 	print(magenta("'A' or 'a' : Move Left", "italic"))
-	print(magenta("'D' or 'd' : Move Right", "italic"), end="/n/n")
-	print(cyan("'stop': Stop the game anytime", "italic"), end="/n/n")
+	print(magenta("'D' or 'd' : Move Right", "italic"), end="\n\n")
+	print(cyan("'stop': Stop the game anytime", "italic"), end="\n\n")
 	return matrix
 
 # Adds random 2 or 4 to a empty space in the matrix
